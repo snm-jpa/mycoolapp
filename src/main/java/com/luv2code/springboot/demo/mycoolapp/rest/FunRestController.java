@@ -7,6 +7,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FunRestController {
 
+
+    //Inject properties for: coach.name & team.name
+
+    @Value("${coach.name}")
+    private String coachName;
+
+    @Value("${team.name}")
+    private String teamName;
+
+    @GetMapping("/teamInfo")
+    public String getTeamInfo(){
+        return "Coach: " + coachName + ", Team name: " + teamName;
+    }
+
     // expose "/" that returns "Hello World"
     @GetMapping("/")
     public String sayHello(){
@@ -24,5 +38,7 @@ public class FunRestController {
     public String getDailyFortune(){
         return "Today is your lucky day.";
     }
+
+
 
 }

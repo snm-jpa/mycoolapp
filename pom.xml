@@ -66,6 +66,8 @@
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
+				<!--to package executable jar or war archive -->
+				<!-- can also easily run the app -->
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
